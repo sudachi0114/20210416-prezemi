@@ -1,6 +1,7 @@
 from typing import List
 
 import os
+import shutil
 
 IGNORE_FILES = ['.DS_Store', '__pycache__']
 
@@ -46,7 +47,10 @@ def main():
 
         for pic in pictures:
             target_file = os.path.join(final_dir, cname, "cropped", pic)
-            print(target_file)
+            # print(target_file)
+
+            dist = os.path.join(nori_n_dir, pic)
+            shutil.copy(target_file, dist)
 
 if __name__ == "__main__":
     main()
