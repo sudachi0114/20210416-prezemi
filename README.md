@@ -12,3 +12,5 @@
 ```shell
 $ python source.py
 ```
+
+詳細については [ガイドライン](./guideline.md) をご覧ください 🙇‍♂️
