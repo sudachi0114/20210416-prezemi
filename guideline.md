@@ -29,13 +29,13 @@ $ tree -L 2
 .
 └── final
    ├── 1
-   │  ├── IMG_XXXX.CR3 <= これらは使わないのでいらない..
-   │  ├── IMG_XXXX.JPG <= これらは使わないのでいらない..
-   │  └── cropped <= この下にあるものだけほしい
+   │  ├── IMG_XXXX.CR3 # <= これと
+   │  ├── IMG_XXXX.JPG # <= これは使わないのでいらない..
+   │  └── cropped      # <= この下にあるものだけほしい
    │     ├── IMG_XXXX.JPG 
    │     └── ...
    ├── 2
-   │   └── cropped # 以下、同じ
+   │   └── cropped     # 以下、同じ
    ├── 3
    │   └── cropped
    ├── 4
