@@ -35,7 +35,7 @@ def main():
     cls_list = listdir_sieved(final_dir)
 
     result_dir = os.path.join(os.getcwd(), "result")
-    os.makedirs(result_dir, exist_ok=True)
+    os.makedirs(result_dir, exist_ok=False)
 
     gen = cropped_generator()
 
@@ -43,7 +43,7 @@ def main():
         pictures = next(gen)
 
         nori_n_dir = os.path.join(result_dir, "nori_"+cname)
-        os.makedirs(nori_n_dir, exist_ok=True)
+        os.makedirs(nori_n_dir, exist_ok=False)
 
         for pic in pictures:
             target_file = os.path.join(final_dir, cname, "cropped", pic)
@@ -58,7 +58,6 @@ def test():
     cls_list = listdir_sieved(final_dir)
 
     result_dir = os.path.join(os.getcwd(), "result")
-    os.makedirs(result_dir, exist_ok=True)
 
     for cname in cls_list:
         print(cname)
