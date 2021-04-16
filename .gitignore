@@ -1,0 +1,6 @@
+# dotfiles
+.DS_Store
+
+# 画像ファイル
+*.JPG
+*.CR3
