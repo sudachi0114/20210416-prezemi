@@ -52,5 +52,30 @@ def main():
             dist = os.path.join(nori_n_dir, pic)
             shutil.copy(target_file, dist)
 
+
+def test():
+    final_dir = os.path.join(os.getcwd(), "final")
+    cls_list = listdir_sieved(final_dir)
+
+    result_dir = os.path.join(os.getcwd(), "result")
+    os.makedirs(result_dir, exist_ok=True)
+
+    for cname in cls_list:
+        print(cname)
+
+        src_dir = os.path.join(final_dir, cname, "cropped")
+        src_pic_list = listdir_sieved(src_dir)
+        print(len(src_pic_list))  # length <- List の長さ
+
+        dist_dir = os.path.join(result_dir, "nori_"+cname)
+        dist_pic_list = listdir_sieved(src_dir)
+        print(len(dist_pic_list))
+
+        assert len(src_pic_list) == len(dist_pic_list)
+
+    print("全クリ")
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    test()
