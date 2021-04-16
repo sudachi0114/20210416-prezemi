@@ -33,13 +33,19 @@ def main():
     final_dir = os.path.join(os.getcwd(), "final")
     cls_list = listdir_sieved(final_dir)
 
+    result_dir = os.path.join(os.getcwd(), "result")
+    os.makedirs(result_dir, exist_ok=True)
+
     gen = cropped_generator()
 
     for cname in cls_list:
         pictures = next(gen)
 
+        nori_n_dir = os.path.join(result_dir, "nori_"+cname)
+        os.makedirs(nori_n_dir, exist_ok=True)
+
         for pic in pictures:
-            target_file = os.path.join(final_dir, cname, pic)
+            target_file = os.path.join(final_dir, cname, "cropped", pic)
             print(target_file)
 
 if __name__ == "__main__":
