@@ -67,7 +67,7 @@ def test():
         print(len(src_pic_list))  # length <- List の長さ
 
         dist_dir = os.path.join(result_dir, "nori_"+cname)
-        dist_pic_list = listdir_sieved(src_dir)
+        dist_pic_list = listdir_sieved(dist_dir)
         print(len(dist_pic_list))
 
         assert len(src_pic_list) == len(dist_pic_list)
